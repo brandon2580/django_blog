@@ -1,6 +1,16 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
-<h1>Welcome</h1>
+<div class="center">
+    <h1>Welcome</h1>
+    <h3>To create a blog post, click <a href="/create_blog">here</a></h3>
+    <h3>To view all current blog posts, click <a href="/published_blogs">here</a></h3>
+</div>
+
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
 
 {% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<h1 class="center publishedBlogsHeader">Published Blogs</h1>
+
+{% for article in articles %}
+<ul class='blackBackground'>
+    <li>Title - {{ article.title }}</li>
+    <li>Author - {{ article.author }}</li>
+    <li>Content - {{ article.content }}</li>
+</ul>
+{% endfor %}
+
+<style>
+    .center {
+        text-align: center;
+    }
+
+    .publishedBlogsHeader{
+        margin: 2.5%;
+    }
+
+    .blackBackground {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+{% endblock content %}

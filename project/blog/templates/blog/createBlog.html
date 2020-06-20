@@ -39,18 +39,6 @@
         <button class="postAdd" name="postAdd" type="submit"><i class="fa fa-plus icon"></i>Add Post</button>
     </div>
 
-
-    <h2 class="center articlesHeader">Articles:</h2>
-
-    {% for article in articles %}
-    <ul class='blackBackground'>
-        <li>Title - {{ article.title }}</li>
-        <li>Author - {{ article.author }}</li>
-        <li>Content - {{ article.content }}</li>
-    </ul>
-
-    {% endfor %}
-
 </form>
 
 <style>

@@ -23,3 +23,8 @@ def create_blog_view(request):
             CompleteArticle = Article(title=title, author=author, content=content)
             CompleteArticle.save()
     return render(request, 'blog/createBlog.html', context={'first_name': first_name, 'last_name': last_name, 'articles': articles})
+
+
+def published_blogs_view(request):
+    articles = Article.objects.all()
+    return render(request, 'blog/publishedBlogs.html', context={'articles': articles})
