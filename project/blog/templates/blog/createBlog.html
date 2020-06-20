@@ -1,0 +1,79 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <h1 class='center'>This is the index view of the blog page</h1>
+    <p class='center'>My first name is {{ first_name }} and my last name is {{ last_name }}</p>
+
+    <div class='center'>
+        <h2>Create a new article</h2>
+
+        <label for="title">Title</label>
+        <div class='row'>
+            <div class='col-lg-12'>
+                <input type="text" id="title" class="createArticleInput" placeholder="What is the article title?"
+                    name="title" required>
+            </div>
+        </div>
+
+        <label for="author">Author</label>
+        <div class='row'>
+            <div class='col-lg-12'>
+                <input type="text" id="author" class="createArticleInput" placeholder="Who is the article author?"
+                    name="author" required>
+            </div>
+        </div>
+
+        <label for="content">Content</label>
+        <div class='row'>
+            <div class='col-lg-12'>
+                <input type="text" id="content" class="createArticleInput" placeholder="What is the article content?"
+                    name="content" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="row postAdd">
+        <button class="postAdd" name="postAdd" type="submit"><i class="fa fa-plus icon"></i>Add Post</button>
+    </div>
+
+
+    <h2 class="center articlesHeader">Articles:</h2>
+
+    {% for article in articles %}
+    <ul class='blackBackground'>
+        <li>Title - {{ article.title }}</li>
+        <li>Author - {{ article.author }}</li>
+        <li>Content - {{ article.content }}</li>
+    </ul>
+
+    {% endfor %}
+
+</form>
+
+<style>
+    .center {
+        text-align: center;
+    }
+
+    .createArticleInput {
+        margin-bottom: 20px;
+    }
+
+    .postAdd {
+        margin: 0 auto;
+    }
+
+    .articlesHeader {
+        margin: 2.5%;
+    }
+
+    .blackBackground {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+{% endblock content %}
