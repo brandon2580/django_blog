@@ -1,13 +1,9 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
-<h1 class="center publishedBlogsHeader">Published Blogs</h1>
+<h1 class="center publishedBlogsHeader">Individual blog view</h1>
 
-<ul>
-    {% for article in articles %}
-    <h5 class="articleTitleSection"><a href="/individual_blog/{{ article.id }}/">{{ article.title }}</a><br> by: {{article.author}}</h5>
-    {% endfor %}
-</ul>
+{{articleContent}}
 
 <style>
     .center {
