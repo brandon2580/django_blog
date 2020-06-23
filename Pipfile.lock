@@ -61,7 +61,7 @@
                 "sha256:6dd26bfda3af29177d8ab7333a0c7b7642eb615ce83764f4d15a9aecda3201c4"
             ],
             "index": "pypi",
-            "version": "==5.1.0"
+            "version": "==4.0.0"
         }
     },
     "develop": {}
