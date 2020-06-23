@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 import dj_database_url 
 
 from whitenoise.django import DjangoWhiteNoise
@@ -135,7 +134,3 @@ STATICFILES_DIRS = [
 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-
