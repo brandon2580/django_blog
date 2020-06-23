@@ -28,8 +28,8 @@
         <label for="content">Content</label>
         <div class='row'>
             <div class='col-lg-12'>
-                <input type="text" id="content" class="createArticleInput" placeholder="What is the article content?"
-                    name="content" required>
+                <textarea type="text" id="content" class="createArticleInput contentInput" placeholder="What is the article content?"
+                    name="content" required></textarea>
             </div>
         </div>
     </div>
@@ -55,6 +55,11 @@
 
     .articlesHeader {
         margin: 2.5%;
+    }
+
+    .contentInput{
+        width: 50%;
+        height: 250px;
     }
 
     .header{
