@@ -1,11 +1,9 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
-<h1 class="center publishedBlogsHeader">Individual blog view</h1>
-
 {% for article in page_obj %}
     {# Each "article" is a Article model object. #}
-    <h3 class="center">{{article.title}} <strong> by {{ article.author }}</strong></h3>
+    <h2 class="center publishedBlogsHeader">{{article.title}} <strong> by {{ article.author }}</strong></h2>
     <p class="articleContent center">{{ article.content }}</p><br>
 {% endfor %}
 

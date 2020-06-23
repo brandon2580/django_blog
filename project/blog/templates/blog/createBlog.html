@@ -4,8 +4,7 @@
 <form action="" method="post">
     {% csrf_token %}
 
-    <h1 class='center'>This is the index view of the blog page</h1>
-    <p class='center'>My first name is {{ first_name }} and my last name is {{ last_name }}</p>
+    <h1 class='center header'>This is the index view of the blog page</h1>
 
     <div class='center'>
         <h2>Create a new article</h2>
@@ -55,6 +54,10 @@
     }
 
     .articlesHeader {
+        margin: 2.5%;
+    }
+
+    .header{
         margin: 2.5%;
     }
 

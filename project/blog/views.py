@@ -13,8 +13,6 @@ def blog_index_view(request):
 
 def create_blog_view(request):
     articles = Article.objects.all()
-    first_name = 'Brandon'
-    last_name = 'Dalbec'
 
     if request.method == "POST":
         if "postAdd" in request.POST:
@@ -24,7 +22,7 @@ def create_blog_view(request):
             content = request.POST["content"]
             CompleteArticle = Article(title=title, author=author, content=content)
             CompleteArticle.save()
-    return render(request, 'blog/createBlog.html', context={'first_name': first_name, 'last_name': last_name, 'articles': articles})
+    return render(request, 'blog/createBlog.html', context={'articles': articles})
 
 
 def published_blogs_view(request):
