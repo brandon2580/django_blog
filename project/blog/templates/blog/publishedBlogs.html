@@ -5,9 +5,10 @@
 
 <ul>
     {% for article in articles %}
-    <h5 class="articleTitleSection"><a href="/individual_blog/{{ article.id }}/">{{ article.title }}</a><br> by: {{article.author}}</h5>
+    <h5 class="articleTitleSection"><a href="/individual_blog/?page={{forloop.counter}}">{{ article.title }}</a><br> by: {{article.author}}</h5>
     {% endfor %}
 </ul>
+
 
 <style>
     .center {

@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.template import loader
+from django.core.paginator import Paginator
 
 from .models import Article
 
@@ -32,7 +33,11 @@ def published_blogs_view(request):
     context={'articles': articles}
     return HttpResponse(template.render(context, request))
 
-def individual_blog_view(request, id):
-    article = Article.objects.get(pk=id)
-    articleContent = article.content
-    return render(request, 'blog/individualBlog.html', context={'article': article, 'articleContent': articleContent})
+
+def individual_blog_view(request):
+    articles = Article.objects.all()
+    paginator = Paginator(articles, 1) # Show 1 article per page.
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'blog/individualBlog.html', {'page_obj': page_obj})
