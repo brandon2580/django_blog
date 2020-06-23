@@ -15,3 +15,4 @@ sqlparse==0.3.1
 virtualenv==20.0.24
 virtualenv-clone==0.5.4
 whitenoise==5.1.0
+wsgiref==0.1.2
