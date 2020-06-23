@@ -7,4 +7,5 @@
 - `pip install pipenv`
 - `pipenv shell`
 - `py manage.py runserver`
+- View at `http://127.0.0.1:8000/`
 - Enjoy!
